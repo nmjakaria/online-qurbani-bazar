@@ -11,9 +11,9 @@ export default function RegisterPage() {
         const { name, photo, email, password } = data;
 
         const { data: res, error } = await authClient.signUp.email({
-            name: name, // required
-            email: email, // required
-            password: password, // required
+            name: name, 
+            email: email, 
+            password: password, 
             image: photo,
             callbackURL: "/login",
         })

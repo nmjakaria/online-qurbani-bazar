@@ -62,16 +62,20 @@ const Navbar = () => {
       {/* Navbar End: Auth Buttons */}
       <div className="navbar-end gap-3">
         {session ? (
-          <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar online">
-              <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <Image src={user?.image || <FaUserCircle />} alt="User" width={40} height={40} suppressHydrationWarning={true}/>
-              </div>
-            </label>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow bg-base-100 rounded-box w-52">
-              <li><Link href="/profile">My Profile</Link></li>
-              <li><button className="text-error font-bold" onClick={() => authClient.signOut({ callbackURL: '/' })}>Logout</button></li>
-            </ul>
+
+          <div className="flex items-center justify-center gap-4">
+            <h2>{`Welcome, ${user?.name}`}</h2>
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar online">
+                <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                  <Image src={user?.image || <FaUserCircle />} alt="User" width={40} height={40} suppressHydrationWarning={true}/>
+                </div>
+              </label>
+              <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow bg-base-100 rounded-box w-52">
+                <li><Link href="/my-profile">My Profile</Link></li>
+                <li><button className="text-error font-bold" onClick={() => authClient.signOut({ callbackURL: '/' })}>Logout</button></li>
+              </ul>
+            </div>
           </div>
         ) : (
           <>
