@@ -81,7 +81,7 @@ export default function QurbaniSidebar() {
             Essential Tips
           </h3>
           <div className="space-y-4">
-            {qurbaniTips.slice(0, 3).map((tip, index) => { // Sliced for better sidebar height
+            {qurbaniTips.slice(0, 3).map((tip, index) => { 
               const Icon = tip.icon;
               return (
                 <div

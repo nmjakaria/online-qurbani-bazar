@@ -81,7 +81,7 @@ const AnimalDetails = async ({ params }) => {
                                 Contact Seller
                             </button>
                             <button className="btn btn-outline btn-secondary flex-1 rounded-full uppercase tracking-widest">
-                                Add to Wishlist
+                                Add to Cart
                             </button>
                         </div>
                     </div>
