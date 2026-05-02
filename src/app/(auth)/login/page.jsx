@@ -2,6 +2,7 @@
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import { useForm } from "react-hook-form"
+import toast from 'react-hot-toast';
 import { FcGoogle } from 'react-icons/fc';
 
 
@@ -19,9 +20,17 @@ export default function LoginPage() {
             email: email, // required
             password: password, // required
             rememberMe: true,
-            callbackURL: "/profile",
+            callbackURL: "/my-profile",
         });
-        console.log('Login Response:', { res, error })
+        if (error) {
+            console.error("Login Error:", error);
+            toast.error(error.message || "Login failed!");
+            return;
+        }
+        if (res) {
+            console.log("Login Success:", res);
+            toast.success("Login successful!");
+        }
     };
     const handlegoogleLogin = async () => {
 

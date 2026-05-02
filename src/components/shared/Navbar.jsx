@@ -6,6 +6,7 @@ import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import { FaUserCircle } from "react-icons/fa";
 import { HiMenu } from "react-icons/hi";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -73,7 +74,10 @@ const Navbar = () => {
               </label>
               <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow bg-base-100 rounded-box w-52">
                 <li><Link href="/my-profile">My Profile</Link></li>
-                <li><button className="text-error font-bold" onClick={() => authClient.signOut({ callbackURL: '/' })}>Logout</button></li>
+                <li><button className="text-error font-bold" onClick={() => {
+                  authClient.signOut({ callbackURL: '/' });
+                  toast.success("You have been logged out.");
+                }}>Logout</button></li>
               </ul>
             </div>
           </div>
