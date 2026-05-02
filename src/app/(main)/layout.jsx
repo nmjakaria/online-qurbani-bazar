@@ -1,4 +1,5 @@
 import Banner from "@/components/homepage/Banner";
+import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 
 const Mainlayout = ({ children }) => {
@@ -7,6 +8,7 @@ const Mainlayout = ({ children }) => {
             <Navbar></Navbar>
             <Banner></Banner>
             {children}
+            <Footer></Footer>
         </div>
     );
 };

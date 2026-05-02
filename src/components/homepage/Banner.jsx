@@ -12,9 +12,11 @@ import "swiper/css/pagination";
 
 const Banner = () => {
     const sliderImages = [
-        "https://i.ibb.co.com/chqZ542K/cow-photography-20048221.png", // Replace with your actual hosted image links
+        "https://i.ibb.co.com/chqZ542K/cow-photography-20048221.png",
         "https://i.ibb.co.com/5gncpW0N/cow-20610191.png",
+        
         "https://i.ibb.co.com/sd0p2sjR/cow3.png",
+        "https://i.ibb.co.com/gLHk1zsK/goat2.png",
         "https://i.ibb.co.com/DH2Wz8Gg/cow4.png",
         "https://i.ibb.co.com/VWMbzQjB/cow5.png"
     ];
@@ -41,8 +43,6 @@ const Banner = () => {
                     </Link>
                 </div>
 
-                {/* Right Side: Auto-Scrolling Image Slider */}
-                {/* Right Side: Auto-Scrolling Image Slider */}
                 <div className="order-1 lg:order-2 w-full h-75 md:h-112.5">
                     <Swiper
                         spaceBetween={30}

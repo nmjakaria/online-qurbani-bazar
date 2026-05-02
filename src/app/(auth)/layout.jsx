@@ -1,4 +1,5 @@
 import Banner from "@/components/homepage/Banner";
+import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 
 const AuthLayout = ({ children }) => {
@@ -6,6 +7,7 @@ const AuthLayout = ({ children }) => {
         <div>
             <Navbar></Navbar>
             {children}
+            <Footer></Footer>
         </div>
     );
 };

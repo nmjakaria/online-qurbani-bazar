@@ -8,7 +8,7 @@
     "weight": 280,
     "age": 3,
     "location": "Bogura",
-    "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural খাবার.",
+    "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural foods.",
     "image": "https://i.ibb.co.com/chqZ542K/cow-photography-20048221.png",
     "category": "Large Animal"
   },
@@ -61,7 +61,7 @@
     "age": 2,
     "location": "Dhaka",
     "description": "Healthy Black Bengal goat, ideal for small family Qurbani.",
-    "image": "",
+    "image": "https://i.ibb.co.com/gLHk1zsK/goat2.png",
     "category": "Small Animal"
   },
   {
@@ -74,7 +74,7 @@
     "age": 2,
     "location": "Khulna",
     "description": "Well-fed goat with natural food and strong physique.",
-    "image": "https://i.postimg.cc/example-goat2.jpg",
+    "image": "https://i.ibb.co.com/3Y438CVS/goat3.png",
     "category": "Small Animal"
   },
   {
@@ -100,7 +100,7 @@
     "age": 2,
     "location": "Rangpur",
     "description": "Village-raised healthy cow with organic feeding system.",
-    "image": "https://i.postimg.cc/example-cow6.jpg",
+    "image": "https://i.ibb.co.com/sz1ZNKF/cow6.png",
     "category": "Large Animal"
   },
   {
@@ -113,7 +113,7 @@
     "age": 6,
     "location": "Dinajpur",
     "description": "Large Brahman cross bull suitable for premium Qurbani.",
-    "image": "https://i.postimg.cc/example-cow7.jpg",
+    "image": "https://i.ibb.co.com/p6KvvNnv/cow7.png",
     "category": "Large Animal"
   },
   {
@@ -126,7 +126,7 @@
     "age": 3,
     "location": "Sylhet",
     "description": "Beautiful white Jamunapari goat with premium quality.",
-    "image": "https://i.postimg.cc/example-goat3.jpg",
+    "image": "https://i.ibb.co.com/KpnQ4mZP/goat4.jpg",
     "category": "Small Animal"
   },
   {
@@ -139,7 +139,7 @@
     "age": 3,
     "location": "Mymensingh",
     "description": "Healthy brown deshi bull with strong muscle.",
-    "image": "https://i.postimg.cc/example-cow8.jpg",
+    "image": "https://i.ibb.co.com/b8VFhN7/cow8.png",
     "category": "Large Animal"
   },
   {
@@ -152,7 +152,7 @@
     "age": 3,
     "location": "Barisal",
     "description": "Premium Jamunapari goat with excellent size and health.",
-    "image": "https://i.postimg.cc/example-goat4.jpg",
+    "image": "https://i.ibb.co.com/4wtHjJ88/goat5.jpg",
     "category": "Small Animal"
   },
   {
@@ -165,7 +165,7 @@
     "age": 5,
     "location": "Chattogram",
     "description": "Large dairy breed bull with impressive body structure.",
-    "image": "https://i.postimg.cc/example-cow9.jpg",
+    "image": "https://i.ibb.co.com/p6KvvNnv/cow7.png",
     "category": "Large Animal"
   },
   {
@@ -178,7 +178,7 @@
     "age": 2,
     "location": "Comilla",
     "description": "Affordable and healthy black goat for budget Qurbani.",
-    "image": "https://i.postimg.cc/example-goat5.jpg",
+    "image": "https://i.ibb.co.com/wrhmMNvz/goat6.jpg",
     "category": "Small Animal"
   },
   {
@@ -191,7 +191,7 @@
     "age": 7,
     "location": "Tangail",
     "description": "Extra large bull for grand Qurbani events.",
-    "image": "https://i.postimg.cc/example-cow10.jpg",
+    "image": "https://i.ibb.co.com/21DF56Vq/cow10.png",
     "category": "Large Animal"
   },
   {
@@ -204,7 +204,7 @@
     "age": 4,
     "location": "Kushtia",
     "description": "Grass-fed healthy cow with balanced growth.",
-    "image": "https://i.postimg.cc/example-cow11.jpg",
+    "image": "https://i.ibb.co.com/Kj4qCwpP/cow11.png",
     "category": "Large Animal"
   },
   {
@@ -217,7 +217,7 @@
     "age": 4,
     "location": "Noakhali",
     "description": "Large Beetal goat with superior meat quality.",
-    "image": "https://i.postimg.cc/example-goat6.jpg",
+    "image": "https://i.ibb.co.com/gMJwXXgQ/goat7.jpg",
     "category": "Small Animal"
   },
   {
@@ -230,7 +230,7 @@
     "age": 3,
     "location": "Faridpur",
     "description": "Strong local bull raised with traditional farming methods.",
-    "image": "https://i.postimg.cc/example-cow12.jpg",
+    "image": "https://i.ibb.co.com/nNx9HscK/cow12.png",
     "category": "Large Animal"
   },
   {
@@ -243,7 +243,7 @@
     "age": 3,
     "location": "Gazipur",
     "description": "Elegant goat with healthy growth and premium look.",
-    "image": "https://i.postimg.cc/example-goat7.jpg",
+    "image": "https://i.ibb.co.com/SwCBxbTT/goat8.jpg",
     "category": "Small Animal"
   },
   {
@@ -256,7 +256,7 @@
     "age": 8,
     "location": "Natore",
     "description": "One of the largest premium cows available for Eid Qurbani.",
-    "image": "https://i.postimg.cc/example-cow13.jpg",
+    "image": "https://i.ibb.co.com/qMJgtFtN/cow13.png",
     "category": "Large Animal"
   }
 ]
