@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { authClient } from "@/lib/auth-client"; 
 
+
 const ProfilePage = () => {
   const { data: session } = authClient.useSession();
   

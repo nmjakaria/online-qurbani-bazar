@@ -1,8 +1,14 @@
+import AnimalActions from "@/components/cart/AnimalActions";
 import { getAnimalById } from "@/lib/data";
 import { Phone, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+
+export const metadata = {
+    title: "Animal Details - Online Qurbani Bazar",
+    description: "View detailed information about our sacrificial animals. Find the perfect livestock for your Qurbani needs with comprehensive details and transparent pricing.",
+};
 
 const AnimalDetails = async ({ params }) => {
     const { id } = await params;
@@ -77,18 +83,18 @@ const AnimalDetails = async ({ params }) => {
                             </p>
                         </div>
 
-                        {/* Action Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-4 mt-auto">
+                        {/* Actions */}
+                        {/* <div className="flex flex-col sm:flex-row gap-4 mt-auto">
                             <button className="btn btn-primary flex-1 rounded-full text-white uppercase tracking-widest gap-2">
                                 <Phone size={18} /> Contact Seller
                             </button>
                             <button
                                 className="btn btn-outline btn-secondary flex-1 rounded-full uppercase tracking-widest gap-2"
-                    
                             >
                                 <ShoppingCart size={18} /> Add to Cart
                             </button>
-                        </div>
+                        </div> */}
+                       <AnimalActions animal={animal}></AnimalActions>
                     </div>
                 </div>
             </div>

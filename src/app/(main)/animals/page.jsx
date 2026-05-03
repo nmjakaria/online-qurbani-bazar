@@ -3,6 +3,11 @@ import FilterAndSort from "@/components/homepage/FilterAndSort";
 import QurbaniSidebar from "@/components/homepage/QurbaniSidebar";
 import { getAllAnimals } from "@/lib/data";
 
+export const metadata = {
+  title: "All Animals - Online Qurbani Bazar",
+  description: "Browse our extensive collection of sacrificial animals, hand-picked for quality and health. Find the perfect livestock for your Qurbani needs, with detailed information and transparent pricing. Shop with confidence and make your Qurbani experience seamless and meaningful.",
+};
+
 const AllAnimalsPage = async ({ searchParams }) => {
     const params = await searchParams;
     const sortOrder = params?.sort || "";

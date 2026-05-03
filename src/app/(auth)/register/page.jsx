@@ -3,7 +3,8 @@
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import { useForm } from "react-hook-form";
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
+
 
 export default function RegisterPage() {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -16,14 +17,14 @@ export default function RegisterPage() {
             email: email, 
             password: password, 
             image: photo,
-            callbackURL: "/login",
+            callbackURL: "/",
         })
-        console.log('Registration Response:', { res, error })
+        if(res){
+            toast.success("Registration successful!");
+        }
 
         if (error) {
             toast.error(error.message || "Registration failed!");
-        } else {
-            toast.success("Registration successful! Please check your email to verify your account.");
         }
     };
 

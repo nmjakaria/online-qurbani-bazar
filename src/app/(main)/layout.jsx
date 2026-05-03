@@ -1,3 +1,4 @@
+import CartDrawer from "@/components/cart/CartDrawer";
 import Banner from "@/components/homepage/Banner";
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
@@ -5,10 +6,8 @@ import Navbar from "@/components/shared/Navbar";
 const Mainlayout = ({ children }) => {
     return (
         <div>
-            <Navbar></Navbar>
-            
             {children}
-            <Footer></Footer>
+            <CartDrawer></CartDrawer>
         </div>
     );
 };
