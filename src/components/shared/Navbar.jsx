@@ -7,6 +7,7 @@ import Image from "next/image";
 import { FaUserCircle } from "react-icons/fa";
 import { HiMenu } from "react-icons/hi";
 import toast from "react-hot-toast";
+import { TiShoppingCart } from "react-icons/ti";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -62,6 +63,9 @@ const Navbar = () => {
 
       {/* Navbar End: Auth Buttons */}
       <div className="navbar-end gap-3">
+        <button className="btn btn-ghost btn-sm relative">
+          <TiShoppingCart />
+        </button>
         {session ? (
 
           <div className="flex items-center justify-center gap-4">

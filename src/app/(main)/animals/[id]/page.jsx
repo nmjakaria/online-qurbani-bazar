@@ -1,4 +1,5 @@
 import { getAnimalById } from "@/lib/data";
+import { Phone, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -10,6 +11,7 @@ const AnimalDetails = async ({ params }) => {
     if (!animal) {
         notFound();
     }
+
 
     return (
         <div className="min-h-screen bg-base-200 py-10 px-4">
@@ -24,7 +26,7 @@ const AnimalDetails = async ({ params }) => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-base-100 p-6 md:p-10 rounded-3xl shadow-xl animate__animated animate__fadeIn">
-                    
+
                     {/* Left: Image Section */}
                     <div className="space-y-4">
                         <div className="relative h-100 md:h-125 w-full rounded-2xl overflow-hidden shadow-inner">
@@ -47,9 +49,9 @@ const AnimalDetails = async ({ params }) => {
                         <div>
                             <h1 className="text-4xl font-extrabold text-[#1D3557] mb-2">{animal.name}</h1>
                             <p className="text-xl text-primary font-bold mb-4">৳ {animal.price.toLocaleString()}</p>
-                            
+
                             <div className="divider">Details</div>
-                            
+
                             <div className="grid grid-cols-2 gap-4 mb-6">
                                 <div className="bg-base-200 p-4 rounded-xl text-center">
                                     <p className="text-xs uppercase text-gray-500 font-bold">Breed</p>
@@ -76,12 +78,15 @@ const AnimalDetails = async ({ params }) => {
                         </div>
 
                         {/* Action Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <button className="btn btn-primary flex-1 rounded-full text-white uppercase tracking-widest">
-                                Contact Seller
+                        <div className="flex flex-col sm:flex-row gap-4 mt-auto">
+                            <button className="btn btn-primary flex-1 rounded-full text-white uppercase tracking-widest gap-2">
+                                <Phone size={18} /> Contact Seller
                             </button>
-                            <button className="btn btn-outline btn-secondary flex-1 rounded-full uppercase tracking-widest">
-                                Add to Cart
+                            <button
+                                className="btn btn-outline btn-secondary flex-1 rounded-full uppercase tracking-widest gap-2"
+                    
+                            >
+                                <ShoppingCart size={18} /> Add to Cart
                             </button>
                         </div>
                     </div>
