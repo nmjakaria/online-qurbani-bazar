@@ -9,6 +9,7 @@ import { HiMenu } from "react-icons/hi";
 import toast from "react-hot-toast";
 import { TiShoppingCart } from "react-icons/ti";
 import { useCart } from "@/context/CartContext";
+import Logo from "@/assets/qurbani-hat-logo.png";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -47,7 +48,9 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
+          <Image src={Logo} alt="QurbaniHat Logo" width={40} height={40} className="inline-block mr-2" />
           <Link href="/" className="text-xl md:text-2xl font-black tracking-tighter text-primary">
+          
             Qurbani<span className="text-secondary">Hat</span>
           </Link>
         </div>

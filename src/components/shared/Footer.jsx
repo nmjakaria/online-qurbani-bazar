@@ -1,7 +1,9 @@
 import { Mail, MapPinMinus, Phone } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram, FaTwitter } from "react-icons/fa6";
+import Logo from "@/assets/qurbani-hat-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,9 +15,12 @@ const Footer = () => {
           
           {/* Brand & Mission */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-black tracking-tighter text-white">
-              Qurbani<span className="text-primary">Hat</span>
-            </h2>
+            <div className="flex items-center gap-3">
+              <Image src={Logo} alt="QurbaniHat Logo" width={40} height={40} className="inline-block mr-2 bg-white rounded-full p-1" />
+              <h2 className="text-2xl font-black tracking-tighter text-white">
+                Qurbani<span className="text-primary">Hat</span>
+              </h2>
+            </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Simplifying the sacred tradition of Qurbani through technology. 
               Connecting you with healthy, halal livestock from the best farms 
