@@ -1,12 +1,16 @@
 'use client';
+
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import { useForm } from "react-hook-form"
 import toast from 'react-hot-toast';
 import { FcGoogle } from 'react-icons/fc';
-
+import { Eye, EyeOff } from 'lucide-react';
+import { useState } from 'react';
 
 export default function LoginPage() {
+
+    const [showPassword, setShowPassword] = useState(false);
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -71,17 +75,32 @@ export default function LoginPage() {
                             )}
                         </fieldset>
 
-                        {/* Password Fieldset */}
                         <fieldset className="fieldset p-0">
                             <legend className="fieldset-legend text-lg font-bold text-gray-800 pb-2">
                                 Password
                             </legend>
-                            <input
-                                {...register('password', { required: 'Password is required' })}
-                                type="password"
-                                placeholder="Enter your password"
-                                className={`input input-ghost w-full bg-gray-100 rounded-[5px] text-base placeholder:text-[#ababab] px-6 h-16 focus:bg-gray-100 focus:border-gray-200 ${errors.password ? 'border-red-500' : ''}`}
-                            />
+
+                            <div className="relative w-full">
+                                <input
+                                    {...register('password', { required: 'Password is required' })}
+                                    type={showPassword ? "text" : "password"}
+                                    placeholder="Enter your password"
+                                    className={`input input-ghost w-full bg-gray-100 rounded-[5px] text-base placeholder:text-[#ababab] px-6 pr-14 h-16 focus:bg-gray-100 focus:border-gray-200 ${errors.password ? 'border-red-500' : ''}`}
+                                />
+
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    className="absolute inset-y-0 right-0 flex items-center px-4 text-gray-400 hover:text-gray-600 transition-colors"
+                                >
+                                    {showPassword ? (
+                                        <EyeOff size={22} strokeWidth={1.5} />
+                                    ) : (
+                                        <Eye size={22} strokeWidth={1.5} />
+                                    )}
+                                </button>
+                            </div>
+
                             {errors.password && (
                                 <p className="fieldset-label text-red-500 mt-1">
                                     {errors.password.message}

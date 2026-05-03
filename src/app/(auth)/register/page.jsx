@@ -1,5 +1,6 @@
 'use client';
-
+import { Eye, EyeOff } from 'lucide-react';
+import { useState } from 'react';
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import { useForm } from "react-hook-form";
@@ -8,7 +9,7 @@ import toast from 'react-hot-toast';
 
 export default function RegisterPage() {
     const { register, handleSubmit, formState: { errors } } = useForm();
-
+    const [showPassword, setShowPassword] = useState(false);
     const handleRegister = async (data) => {
         const { name, photo, email, password } = data;
 
@@ -90,12 +91,21 @@ export default function RegisterPage() {
                             <legend className="fieldset-legend text-lg font-bold text-gray-800 pb-2">
                                 Password
                             </legend>
-                            <input
-                                {...register('password', { required: 'Password is required', minLength: { value: 6, message: 'Minimum 6 characters' } })}
-                                type="password"
-                                placeholder="Enter your password"
-                                className={`input input-ghost w-full bg-gray-100 rounded-[5px] text-base placeholder:text-[#ababab] px-6 h-16 focus:bg-gray-100 focus:border-gray-200 ${errors.password ? 'border-red-500' : ''}`}
-                            />
+                            <div className="relative w-full">
+                                <input
+                                    {...register('password', { required: 'Password is required', minLength: { value: 6, message: 'Minimum 6 characters' } })}
+                                    type={showPassword ? "text" : "password"}
+                                    placeholder="Enter your password"
+                                    className={`input input-ghost w-full bg-gray-100 rounded-[5px] text-base placeholder:text-[#ababab] px-6 h-16 focus:bg-gray-100 focus:border-gray-200 ${errors.password ? 'border-red-500' : ''}`}
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                                >
+                                    {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                                </button>
+                            </div>
                             {errors.password && <p className="fieldset-label text-red-500 mt-1">{errors.password.message}</p>}
                         </fieldset>
 
@@ -103,7 +113,7 @@ export default function RegisterPage() {
                         <div className="pt-2">
                             <button
                                 type="submit"
-                                className="btn btn-neutral w-full bg-[#403F3F] border-none rounded-[5px] h-17.5 text-white text-xl font-bold normal-case hover:bg-gray-800"
+                                className="btn btn-neutral w-full bg-primary border-none rounded-[5px] h-17.5 text-white text-xl font-bold normal-case hover:bg-gray-800"
                             >
                                 Register
                             </button>
