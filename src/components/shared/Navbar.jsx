@@ -23,7 +23,7 @@ const Navbar = () => {
     { name: "All Animals", path: "/animals" },
   ];
 
-  const { setIsCartOpen } = useCart();
+  const { setIsCartOpen, cartItems } = useCart();
 
   const activeClass = "text-primary font-bold underline underline-offset-8";
   const inactiveClass = "hover:text-primary transition-colors";
@@ -63,13 +63,15 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        {/* Navbar End: Auth Buttons */}
         <div className="navbar-end gap-3">
           {session ? (
             <div className="flex items-center justify-center gap-4">
-              <button className="btn btn-ghost btn-sm relative" onClick={() => setIsCartOpen(true)}>
-                <TiShoppingCart size={30} />
-              </button>
+              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle" onClick={() => setIsCartOpen(true)}>
+                <div className="indicator">
+                  <TiShoppingCart size={30} />
+                  <span className="badge badge-sm indicator-item bg-[#7C3AED] border-none text-white text-[10px]"> {cartItems.length > 0 ? cartItems.length : '0'} </span>
+                </div>
+              </div>
               <h2>{`Welcome, ${user?.name}`}</h2>
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar online">

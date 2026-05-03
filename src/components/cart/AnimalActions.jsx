@@ -6,10 +6,6 @@ import { ShoppingCart, Phone } from "lucide-react";
 export default function AnimalActions({ animal }) {
   const { addToCart } = useCart();
 
-  const handleBtnClick = () => {
-  console.log("Button clicked, calling addToCart...");
-  addToCart(animal);
-};
 
   return (
     <div className="flex flex-col sm:flex-row gap-4 mt-auto">
@@ -22,7 +18,6 @@ export default function AnimalActions({ animal }) {
       >
         <ShoppingCart size={18} /> Add to Cart
       </button>
-      <button onClick={handleBtnClick}>Add to Cart</button>
     </div>
   );
 }

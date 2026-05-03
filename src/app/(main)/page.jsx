@@ -1,3 +1,4 @@
+import About from "@/components/homepage/About";
 import AnimalCard from "@/components/homepage/AnimalCard";
 import Banner from "@/components/homepage/Banner";
 import FeaturedAnimals from "@/components/homepage/FeaturedAnimals";
@@ -13,6 +14,7 @@ export default function Home() {
       <div>
         <Banner></Banner>
         <FeaturedAnimals></FeaturedAnimals>
+        <About></About>
       </div>
     </>
   );
