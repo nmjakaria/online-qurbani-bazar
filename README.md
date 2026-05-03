@@ -2,7 +2,7 @@
 
 **QurbaniHut** is a professional Full-Stack web application designed to simplify the process of exploring and booking livestock for Qurbani. Built with performance, trust, and user experience in mind, the platform delivers a seamless livestock-to-customer marketplace with a modern, high-conversion interface.
 
-🔗 **Live Link:** https://online-qurbani-bazar.vercel.app/
+🔗 **Live Link:** https://online-qurbani-bazar.vercel.app/ <br/>
 💻 **GitHub Repo:** https://github.com/nmjakaria/online-qurbani-bazar
 
 ---
