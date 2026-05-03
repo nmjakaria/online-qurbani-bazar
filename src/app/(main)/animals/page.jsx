@@ -4,8 +4,8 @@ import QurbaniSidebar from "@/components/homepage/QurbaniSidebar";
 import { getAllAnimals } from "@/lib/data";
 
 export const metadata = {
-  title: "All Animals - Online Qurbani Bazar",
-  description: "Browse our extensive collection of sacrificial animals, hand-picked for quality and health. Find the perfect livestock for your Qurbani needs, with detailed information and transparent pricing. Shop with confidence and make your Qurbani experience seamless and meaningful.",
+    title: "All Animals - Online Qurbani Bazar",
+    description: "Browse our extensive collection of sacrificial animals, hand-picked for quality and health. Find the perfect livestock for your Qurbani needs, with detailed information and transparent pricing. Shop with confidence and make your Qurbani experience seamless and meaningful.",
 };
 
 const AllAnimalsPage = async ({ searchParams }) => {
@@ -14,7 +14,7 @@ const AllAnimalsPage = async ({ searchParams }) => {
     const selectedType = params?.type || "";
 
     const allAnimals = await getAllAnimals() || [];
-    
+
     // Filtering Logic
     let processedAnimals = [...allAnimals];
     if (selectedType) {
@@ -42,32 +42,19 @@ const AllAnimalsPage = async ({ searchParams }) => {
                     <FilterAndSort />
                 </div>
 
-                {/* Main Content Layout: Grid + Sidebar */}
-                <div className="flex flex-col lg:flex-row gap-8">
-                    
-                    {/* Left Side: Animal Grid (Flex-grow to take space) */}
-                    <div className="grow">
-                        {processedAnimals.length > 0 ? (
-                            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                                {processedAnimals.map((animal) => (
-                                    <AnimalCard key={animal.id} animal={animal} />
-                                ))}
-                            </div>
-                        ) : (
-                            <div className="card bg-base-100 py-20 text-center shadow-sm">
-                                <h3 className="text-2xl font-semibold">No animals found.</h3>
-                                <p className="text-gray-500">Try changing your filters!</p>
-                            </div>
-                        )}
-                    </div>
-
-                    {/* Right Side: Sidebar (Fixed width on large screens) */}
-                    <aside className="w-full lg:w-80 shrink-0">
-                        <div className="sticky top-20">
-                            <QurbaniSidebar />
+                <div className="grow">
+                    {processedAnimals.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4">
+                            {processedAnimals.map((animal) => (
+                                <AnimalCard key={animal.id} animal={animal} />
+                            ))}
                         </div>
-                    </aside>
-
+                    ) : (
+                        <div className="card bg-base-100 py-20 text-center shadow-sm">
+                            <h3 className="text-2xl font-semibold">No animals found.</h3>
+                            <p className="text-gray-500">Try changing your filters!</p>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

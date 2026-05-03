@@ -1,5 +1,6 @@
 "use client";
 import { createContext, useContext, useState } from "react";
+import toast from "react-hot-toast";
 
 const CartContext = createContext();
 
@@ -15,6 +16,11 @@ export const CartProvider = ({ children }) => {
     setStep(bookingInfo ? "cart" : "form");
     setIsCartOpen(true);
     setShowSuccess(false);
+
+    toast.success(`${animal.name} added to cart!`, {
+      duration: 2000,
+      position: "top-center",
+    });
   };
 
   const resetAll = () => {

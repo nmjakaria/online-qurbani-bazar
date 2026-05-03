@@ -41,59 +41,69 @@ const halalBreeds = [
     name: "Deshi / Sahiwal Cow",
     type: "Cow",
     details: "Popular for affordability, meat quality, and strong suitability for Qurbani.",
-    image: "https://images.unsplash.com/photo-1766858207728-698384162e8e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1766858207728-698384162e8e?q=80&w=2070&auto=format&fit=crop",
   },
   {
     name: "Black Bengal Goat",
     type: "Goat",
     details: "Highly valued in South Asia for premium meat quality and manageable size.",
-    image: "https://plus.unsplash.com/premium_photo-1691030658378-acdaab929bed?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://plus.unsplash.com/premium_photo-1691030658378-acdaab929bed?q=80&w=687&auto=format&fit=crop",
   },
+  {
+    name: "Kacchi Sheep",
+    type: "Sheep",
+    details: "Known for its adaptability and quality meat, making it a common choice for Qurbani.",
+    image:
+      "https://images.unsplash.com/photo-1637515755087-3bbf0bc1b255?q=80&w=1887&auto=format&fit=crop",
+  }
 ];
 
-export default function QurbaniSidebar() {
+export default function QurbaniSection() {
   return (
-    <aside className="w-full max-w-md mx-auto bg-white text-[#1D3557] rounded-3xl shadow-xl overflow-hidden border border-gray-100">
-      {/* Header - Using your brand's Navy Blue */}
-      <div className="relative p-6 bg-[#1D3557] text-white">
-        <h2 className="text-2xl font-black tracking-tight mb-2">
-          Qurbani Guide
-        </h2>
-        <p className="text-xs text-blue-100/80 leading-relaxed uppercase tracking-widest font-semibold">
-          Honoring the Legacy of Prophet Ibrahim (AS)
-        </p>
-      </div>
+    <section className="w-full bg-pink-50 text-[#1D3557]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-14">
 
-      <div className="p-6 space-y-10">
-        {/* Importance Section */}
-        <section>
-          <h3 className="text-lg font-bold mb-3 text-primary border-l-4 border-primary pl-3">
+        {/* Header */}
+        <div className="text-center space-y-2">
+          <h2 className="text-3xl md:text-4xl font-black">
+            Qurbani Guide
+          </h2>
+          <p className="text-sm md:text-base text-gray-500 uppercase tracking-widest font-semibold">
+            Honoring the Legacy of Prophet Ibrahim (AS)
+          </p>
+        </div>
+
+        {/* Importance */}
+        <section className="space-y-3">
+          <h3 className="text-xl font-bold border-l-4 border-primary pl-3">
             Why Qurbani Matters
           </h3>
-          <p className="text-sm text-gray-600 leading-6">
-            Qurbani is an act of worship to obey Allah and support the poor by sharing blessings. It represents sacrifice, sincerity, and gratitude.
+          <p className="text-sm md:text-base text-gray-600 leading-7 max-w-3xl">
+            Qurbani is an act of worship to obey Allah and support the poor by sharing blessings.
+            It represents sacrifice, sincerity, and gratitude.
           </p>
         </section>
 
-        {/* Tips Section */}
+        {/* Tips */}
         <section>
-          <h3 className="text-lg font-bold mb-5 text-primary border-l-4 border-primary pl-3">
+          <h3 className="text-xl font-bold mb-6 border-l-4 border-primary pl-3">
             Essential Tips
           </h3>
-          <div className="space-y-4">
-            {qurbaniTips.slice(0, 3).map((tip, index) => { 
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {qurbaniTips.map((tip, index) => {
               const Icon = tip.icon;
               return (
                 <div
                   key={index}
-                  className="flex gap-4 bg-base-200/50 rounded-2xl p-4 border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-md transition-all duration-300"
+                  className="flex gap-4 bg-gray-50 rounded-2xl p-5 border hover:border-primary/30 hover:shadow-md transition"
                 >
-                  <div className="shrink-0">
-                    <Icon className="w-5 h-5 text-primary" />
-                  </div>
+                  <Icon className="w-5 h-5 text-primary shrink-0 mt-1" />
                   <div>
-                    <h4 className="text-sm font-bold text-[#1D3557] mb-1">{tip.title}</h4>
-                    <p className="text-[12px] text-gray-500 leading-5">
+                    <h4 className="text-sm font-bold mb-1">{tip.title}</h4>
+                    <p className="text-xs text-gray-500 leading-5">
                       {tip.description}
                     </p>
                   </div>
@@ -103,34 +113,34 @@ export default function QurbaniSidebar() {
           </div>
         </section>
 
-        {/* Top Halal Breeds */}
+        {/* Breeds */}
         <section>
-          <h3 className="text-lg font-bold mb-5 text-primary border-l-4 border-primary pl-3">
-            Popular Breeds
+          <h3 className="text-xl font-bold mb-6 border-l-4 border-primary pl-3">
+            Popular Halal Breeds
           </h3>
-          <div className="grid gap-4">
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {halalBreeds.map((animal, index) => (
               <div
                 key={index}
-                className="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300"
+                className="group rounded-2xl overflow-hidden border bg-white shadow-sm hover:shadow-lg transition"
               >
-                <div className="relative w-full h-32">
+                <div className="relative w-full h-44">
                   <Image
                     src={animal.image}
                     alt={animal.name}
                     fill
                     unoptimized
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <span className="absolute top-2 left-2 text-[10px] bg-primary text-white px-2 py-0.5 rounded-full font-bold">
+                  <span className="absolute top-3 left-3 text-[11px] bg-primary text-white px-3 py-1 rounded-full font-bold">
                     {animal.type}
                   </span>
                 </div>
-                <div className="p-3">
-                  <h4 className="text-sm font-bold text-[#1D3557]">
-                    {animal.name}
-                  </h4>
-                  <p className="text-[11px] text-gray-500 line-clamp-1">
+
+                <div className="p-4">
+                  <h4 className="text-sm font-bold">{animal.name}</h4>
+                  <p className="text-xs text-gray-500 mt-1">
                     {animal.details}
                   </p>
                 </div>
@@ -139,6 +149,6 @@ export default function QurbaniSidebar() {
           </div>
         </section>
       </div>
-    </aside>
+    </section>
   );
 }
