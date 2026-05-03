@@ -16,7 +16,6 @@ export async function proxy(request) {
     return (
         NextResponse.next()
     )
-//   return NextResponse.redirect(new URL('/home', request.url))
 }
  
  

@@ -116,7 +116,7 @@ export default function CartDrawer() {
 
                                         <div className="flex justify-between items-center text-[13px]">
                                             <span className="font-semibold opacity-70">Email</span>
-                                            <span className="truncate max-w-[180px] font-medium">{bookingInfo?.email || "N/A"}</span>
+                                            <span className="truncate max-w-45 font-medium">{bookingInfo?.email || "N/A"}</span>
                                         </div>
 
                                         <div className="flex justify-between items-center text-[13px]">
