@@ -63,7 +63,7 @@ const AllAnimalsPage = async ({ searchParams }) => {
 
                     {/* Right Side: Sidebar (Fixed width on large screens) */}
                     <aside className="w-full lg:w-80 shrink-0">
-                        <div className="sticky top-24">
+                        <div className="sticky top-20">
                             <QurbaniSidebar />
                         </div>
                     </aside>
