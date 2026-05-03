@@ -19,19 +19,19 @@ export default function LoginPage() {
         const { email, password } = data;
 
         const { data: res, error } = await authClient.signIn.email({
-            email: email, // required
-            password: password, // required
+            email: email,
+            password: password, 
             rememberMe: true,
             callbackURL: "/",
         });
         if (error) {
-            console.error("Login Error:", error);
             toast.error(error.message || "Login failed!");
             return;
         }
         if (res) {
-            console.log("Login Success:", res);
-            toast.success("Login successful!");
+            toast.success("Login successful!",{
+                duration: 3000,
+            });
         }
     };
     const handlegoogleLogin = async () => {

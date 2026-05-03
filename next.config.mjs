@@ -24,22 +24,12 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'i.ibb.co.com', // The exact hostname from your error
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'i.ibb.co', // Standard ImgBB just in case
-        port: '',
-        pathname: '/**',
+        hostname: 'i.ibb.co.com',
       },
       {
         protocol: 'https',
         hostname: '**',
-        port: '',
-        pathname: '/**',
-      },
+      }
     ],
   },
 };
