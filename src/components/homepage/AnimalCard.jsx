@@ -10,7 +10,6 @@ const AnimalCard = ({ animal }) => {
           src={animal.image}
           alt={animal.name}
           fill
-          unoptimized
           className="object-cover group-hover:scale-110 transition-transform duration-500"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 25vw, 20vw"
         />
@@ -21,7 +20,7 @@ const AnimalCard = ({ animal }) => {
 
       <div className="card-body p-3">
         <div className="flex justify-between items-start">
-          <h2 className="card-title text-sm font-bold text-[#1D3557] leading-tight">
+          <h2 className="card-title text-md font-bold text-[#1D3557] leading-tight">
             {animal.name}
           </h2>
           <span className="text-primary font-bold text-sm">
@@ -29,7 +28,7 @@ const AnimalCard = ({ animal }) => {
           </span>
         </div>
 
-        <div className="flex gap-2 items-center text-[10px] text-gray-500 mt-1">
+        <div className="flex gap-2 items-center text-[16px] text-gray-500 mt-1">
           <span className="bg-base-200 px-2 py-0.5 rounded-full">{animal.breed}</span>
           <span>•</span>
           <span>{animal.weight} KG</span>
