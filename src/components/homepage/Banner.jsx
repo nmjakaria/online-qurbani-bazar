@@ -12,13 +12,12 @@ import "swiper/css/pagination";
 
 const Banner = () => {
     const sliderImages = [
-        "https://i.ibb.co.com/chqZ542K/cow-photography-20048221.png",
-        "https://i.ibb.co.com/5gncpW0N/cow-20610191.png",
-        
-        "https://i.ibb.co.com/sd0p2sjR/cow3.png",
-        "https://i.ibb.co.com/gLHk1zsK/goat2.png",
-        "https://i.ibb.co.com/DH2Wz8Gg/cow4.png",
-        "https://i.ibb.co.com/VWMbzQjB/cow5.png"
+        "https://i.ibb.co.com/pr3KGmF2/cow4.png",
+        "https://i.ibb.co.com/bM2ZL8Ww/cow5.png",
+        "https://i.ibb.co.com/rGSmL5F1/cow8.png",
+        "https://i.ibb.co.com/gbxN8Jrr/cow10.png",
+        "https://i.ibb.co.com/pr3KGmF2/cow4.png",
+        "https://i.ibb.co.com/bRMGjNd8/goat1.png"
     ];
 
     return (
